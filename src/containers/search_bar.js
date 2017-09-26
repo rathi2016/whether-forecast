@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {fetchWeather} from '../actions/index';
 
 export default class SearchBar extends Component {
   constructor(props){
@@ -8,6 +11,7 @@ export default class SearchBar extends Component {
 
     this.onInputChange = this.onInputChange.bind(this);3
   }
+
   onInputChange(eve) {
     this.setState({ term: eve.target.value});
   }
