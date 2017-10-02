@@ -16,7 +16,7 @@ class SearchBar extends Component {
   onInputChange(eve) {
     this.setState({ term: eve.target.value});
   }
-
+  
   onFormSubmit(event){
     event.preventDefault();
     this.props.fetchWeather(this.state.term)
